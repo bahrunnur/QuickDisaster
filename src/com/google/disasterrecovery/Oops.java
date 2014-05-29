@@ -21,68 +21,38 @@ import android.view.ViewGroup;
 
 public class Oops extends Activity {
 	private List<Card> mCards;
-    private CardScrollView mCardScrollView;
+	private CardScrollView mCardScrollView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
 		/*
 		 * We're creating a card for the interface.
 		 * 
-		 * More info here: http://developer.android.com/guide/topics/ui/themes.html
+		 * More info here:
+		 * http://developer.android.com/guide/topics/ui/themes.html
 		 */
 		createCards();
 
-        mCardScrollView = new CardScrollView(this);
-        ExampleCardScrollAdapter adapter = new ExampleCardScrollAdapter();
-        mCardScrollView.setAdapter(adapter);
-        mCardScrollView.activate();
-        setContentView(mCardScrollView);
+		mCardScrollView = new CardScrollView(this);
+		MyCardScrollAdapter adapter = new MyCardScrollAdapter(mCards);
+		mCardScrollView.setAdapter(adapter);
+		mCardScrollView.activate();
+		setContentView(mCardScrollView);
 	}
+
 	private void createCards() {
-		 mCards = new ArrayList<Card>();
-		 Card card;
-		 
-	        card = new Card(this);
-	        card.setText("Oops, the solution you asked is not available now");
-	        card.setFootnote("Something went wrong");
-	        card.setImageLayout(Card.ImageLayout.LEFT);
-	        card.addImage(R.drawable.oops);
-	        mCards.add(card);
+		mCards = new ArrayList<Card>();
+		Card card;
 
-	}
-	private class ExampleCardScrollAdapter extends CardScrollAdapter {
+		card = new Card(this);
+		card.setText("Oops, the solution you asked is not available now");
+		card.setFootnote("Something went wrong");
+		card.setImageLayout(Card.ImageLayout.LEFT);
+		card.addImage(R.drawable.oops);
+		mCards.add(card);
 
-		@Override
-		public int getCount() {
-			// TODO Auto-generated method stub
-			return mCards.size();
-		}
-
-		@Override
-		public Object getItem(int position) {
-			// TODO Auto-generated method stub
-			return mCards.get(position);
-		}
-
-		@Override
-		public int getPosition(Object item) {
-			// TODO Auto-generated method stub
-			return mCards.indexOf(item);
-		}
-		@Override
-		public int getViewTypeCount() {
-            return Card.getViewTypeCount();
-        }
-		@Override
-        public int getItemViewType(int position){
-            return mCards.get(position).getItemViewType();
-        }
-		@Override
-        public View getView(int position, View convertView,ViewGroup parent) {
-            return  mCards.get(position).getView(convertView, parent);
-        }
-		
 	}
 
 }

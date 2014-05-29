@@ -14,19 +14,26 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/NoActionBar" >
+        
         <activity 
             android:name="com.google.disasterrecovery.Oops">
         </activity>
+        
+        <activity
+            android:name="com.google.disasterrecovery.nearby.NearbyActivity">
+        </activity>
+        
         <activity
             android:icon="@drawable/ic_launcher"
             android:name="com.google.disasterrecovery.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-            <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
-        </intent-filter>
-        <meta-data android:name="com.google.android.glass.VoiceTrigger"
-            android:resource="@xml/voice_trigger" />
+	            <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+	        </intent-filter>
+	        <meta-data android:name="com.google.android.glass.VoiceTrigger"
+	            android:resource="@xml/voice_trigger" />
         </activity>
+        
     </application>
 
 </manifest>
