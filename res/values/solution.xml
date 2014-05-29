@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="earthquake">
+        <item>Get out of the building</item>
+        <item>Avoid buildings</item>
+        <item>Do not move</item>
+    </array>
+    <array name="tsunami">
+        <item>Stay away from coastal</item>
+        <item>Go to higher ground</item>
+    </array>
+    <array name="volcanic_ash">
+        <item>Take cover inside building</item>
+        <item>Wear respiratory protector</item>
+        <item>Wear protective glass</item>
+    </array>
+    <array name="volcano">
+        <item>Stay away from volcano</item>
+        <item>Wear respiratory protector</item>
+        <item>Evacuate yourself</item>
+        <item>Avoid volcanic materials</item>
+    </array>
+    <array name="flood">
+        <item>Save your precious items</item>
+        <item>Stay away from river</item>
+        <item>Evacuate yourself</item>
+    </array>
+    <array name="landslide">
+        <item>Stay away from cliff</item>
+        <item>Evacuate yourself</item>
+    </array>
+    <array name="fire">
+        <item>Stay away from fire</item>
+        <item>Get out of the building</item>
+        <item>Find water source</item>
+        <item>Put out the fire</item>
+    </array>
+    <array name="typhoon">
+        <item>Take cover inside the building</item>
+        <item>Get down</item>
+        <item>Avoid high building</item>
+    </array>
+    <array name="tornado">
+        <item>Get inside the bunker</item>
+        <item>Run away from tornado</item>
+    </array>
+</resources>
